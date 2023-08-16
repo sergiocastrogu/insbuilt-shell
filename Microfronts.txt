@@ -1,0 +1,18 @@
+ng new --NombreProyecto
+
+Instalacion de module federation para angular 14, cambiar de acuerdo a la v de angular.
+ npm i @angular-architects/module-federation-tools@14.0.0
+
+
+Para el orquestador se ejecuta el sigueinte comando, tenga en cuenta el puerto de salida y el nombre del proyecto, siempre de tipo host.
+ng add @angular-architects/module-federation --project mf-shell --port 4200 --type host
+
+Para los microfronts se ejecuta el siguiente comando, tenga en cuenta que el puerto debe ser diferente al de el orquestador y el de otros sitios, cambiar el nombre del proyecto.
+ng add @angular-architects/module-federation --project mf-auth --port 4503 --type remote
+
+
+
+Se debe exportar en el archivo webpack.config.js Modulos diferentes a el AppModule.ts ya que si llega a ser llamado, el appmodule del shell le presentara errores.
+Importante la implementacion en el shell del HttpClientModule para peticiones http.
+El interceptor unicamente se crea y controla en el proyecto orquestador.
+Los guardianes se crean y controlan desde el proyecto orquestador.

@@ -1,0 +1,55 @@
+
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: cyan;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    min-width: 80%;
+}
+
+.button-topbar{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.button-t{
+    background: transparent;
+    border-radius: 15px;
+    border: solid 1px white;
+    margin-left: 1rem;
+    padding: 0.5rem;
+}
+
+@media (min-width: 720px) {
+
+    .topbar{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        height: 1.5rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        background-color: cyan;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        flex-wrap: nowrap;
+    }
+    
+    .button-topbar{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    .button-t{
+        background: transparent;
+        border-radius: 15px;
+        border: solid 1px white;
+        margin-left: 1rem;
+        padding: 0.5rem;
+    }
+}
